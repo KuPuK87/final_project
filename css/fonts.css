@@ -1,0 +1,63 @@
+@font-face {
+    font-family: "DMSerifDisplay";
+    src: local("DMSerifDisplay-Regular"), local("DMSerifDisplay Regular"),
+        url("../fonts/DMSerifDisplay-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: local("Poppins-Bold"), local("Poppins Bold"),
+        url("../fonts/Poppins-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: local("Poppins-Light"), local("Poppins Light"),
+        url("../fonts/Poppins-Light.ttf");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: local("Poppins-Medium"), local("Poppins Medium"),
+        url("../fonts/Poppins-Medium.ttf");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: local("Poppins-Regular"), local("Poppins Regular"),
+        url("../fonts/Poppins-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PTSerif";
+    src: local("PTSerif-Bold"), local("PTSerif Bold"),
+        url("../fonts/PTSerif-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PTSerif";
+    src: local("PTSerif-Regular"), local("PTSerif Regular"),
+        url("../fonts/PTSerif-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "RammettoOne";
+    src: local("RammettoOne-Regular"), local("RammettoOne Regular"),
+        url("../../fonts/RammettoOne-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
