@@ -30,11 +30,10 @@ a {
 .container {
     width: 80%;
     max-width: 1120px;
-    padding: 0 40px 0 40px;
     margin: 0 auto;
 }
 
-.header {
+header {
     position: sticky;
     top: 0;
     z-index: 20;
@@ -108,7 +107,7 @@ a {
 }
 
 .navigation_item>a:hover {
-    filter: brightness(0.7);
+    color: black;
 }
 
 .burger-menu {
@@ -521,14 +520,119 @@ a {
 /* FAQ */
 
 .faq_block-title {
-    display: flex;
     margin-top: 300px;
+}
+
+
+.faq_block-title h2 {
     font-family: "PTSerif";
     font-weight: 400;
     font-size: 38px;
     line-height: 140%;
     color: #402B2B;
+    margin-bottom: 135px;
 }
-.faq_block-title h2 {
-    width: 50%;
+
+.faq_block-questions {
+    display: flex;
+    justify-content: space-around;
+}
+
+.accordion_item {
+    margin-bottom: 15px;
+}
+
+.faq_block-item {
+    width: 48%;
+}
+
+.accordion {
+    position: relative;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    width: 100%;
+    color: #402B2B;
+    cursor: pointer;
+    padding: 0 112px 0 35px;
+    height: 90px;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: 0.5s;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 10px #E0E0E0;
+    border-radius: 20px;
+}
+
+.accordion:hover {
+    background: #F5F5FF;
+}
+
+.accordion:after {
+    position: absolute;
+    right: 35px;
+    top: 30px;
+    content: "\003E";
+    color: #000000;
+    ;
+    font-size: 18px;
+    font-weight: bold;
+    float: right;
+    margin: 0;
+}
+
+.active:after {
+    transform: rotate(90deg);
+}
+
+.accordion_panel {
+    position: relative;
+    color: #212121;
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.accordion_panel p {
+    position: relative;
+    padding: 50px 35px;
+    font-family: "Poppins";
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #F5F5FF;
+    margin-bottom: 80px;
+}
+
+.faq_block-item:last-child {
+    text-align: right;
+
+}
+
+.faq_block-item:last-child img {
+    margin-top: 200px;
+}
+
+.faq_block-button {
+    margin-top: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+.faq_block-button button {
+    background: #9B9BCA;
+    border-radius: 10px;
+    padding: 30px 220px;
+    font-family: "Rubik";
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    color: #FFFFFF;
+    border: none;
 }
