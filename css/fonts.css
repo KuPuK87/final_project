@@ -68,3 +68,13 @@
     font-weight: 700;
     font-style: normal;
 }
+
+@font-face {
+    font-family: "RubikLight";
+    src: local("Rubik-Light"), local("Rubik Light"),
+        url("../../fonts/Rubik-Light.ttf");
+    font-weight: 300;
+    font-style: normal;
+}
+
+

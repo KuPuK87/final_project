@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
 
-// slider
+  // slider
   const images = document.querySelectorAll(".slider_li");
   const pages = document.querySelectorAll(".slider_pages-li");
   const sliderBlock = document.querySelector(".slider");
@@ -90,6 +90,57 @@ window.addEventListener('load', () => {
       }
     });
   }
+
+
+
+  // form
+
+  let form = document.querySelector('.form');
+  let [inputName, inputEmail, formSubject] = form.querySelectorAll('input');
+  let formTextarea = form.querySelector('textarea');
+  let popup = document.querySelector('.popup');
+
+  let nameRegExp = /^(\s)*[A-Za-z]+((\s)?((\'|\-|\.)?([A-Za-z])+))*(\s)*$/;
+  let emailRegExp = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i;
+
+  inputName.addEventListener('change', () => {
+    checkInputValue(inputName, nameRegExp);
+  });
+
+  inputEmail.addEventListener('change', () => {
+    checkInputValue(inputEmail, emailRegExp);
+  });
+
+  function checkInputValue(elem, reg) {
+    if (reg.test(elem.value)) {
+      elem.classList.remove('input_invalid');
+    } else {
+      elem.classList.add('input_invalid');
+    }
+  }
+
+  form.querySelector('.input_submit').addEventListener('click', () => {
+    checkInputValue(inputName, nameRegExp);
+    checkInputValue(inputEmail, emailRegExp);
+
+    if (!inputName.classList.contains('input_invalid') && !inputEmail.classList.contains('input_invalid')) {
+      popup.parentElement.classList.remove('popup_hidden');
+
+      if (formSubject.value !== '') {
+        popup.querySelector('.popup_subject').innerText = `Subject: ${formSubject.value}`;
+      }
+      if (formTextarea.value !== '') {
+        popup.querySelector('.popup_describe').innerText = `Description: ${formTextarea.value}`;
+      }
+    }
+  });
+
+  popup.querySelector('button').addEventListener('click', () => {
+    [inputName, inputEmail, formSubject, formTextarea].forEach(item => item.value = '');
+    popup.querySelector('.popup_subject').innerText = 'Without subject';
+    popup.querySelector('.popup_describe').innerText = 'Without description';
+    popup.parentElement.classList.add('popup_hidden');
+  });
 
 
 

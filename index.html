@@ -7,6 +7,9 @@
     <title>Dreammaker</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
+    <script src="https://kit.fontawesome.com/e1b9e38b4f.js" crossorigin="anonymous"></script>
+    <script src="/js/slider.js"></script>
+    <script src="/js/main.js"></script>
 </head>
 
 <body>
@@ -311,15 +314,95 @@
     </section>
 
     <section class="contact" id="Contact">
+        <div class="container">
+            <div class="contact_title">
+                <h2>Please join with us & get all kind of benifit</h2>
+            </div>
+            <div class="contact_form">
+                <div class="form-information">
+                    <form action="#" method="get" class="form" autocomplete="off" onsubmit="return false">
+                        <input type="text" name="user-name" class="form_input" placeholder="Name (Required)" required>
+                        <input type="email" name="user-email" class="form_input" placeholder="Email (Required)"
+                            required>
+                        <input type="text" name="subject" class="form_input" placeholder="Subject">
+                        <textarea name="subject-text" class="form_textarea" cols="30" rows="10"
+                            placeholder="Describe your project in detail..."></textarea>
+                        <input type="submit" name="submit" class="form_input input_submit" value="Submit">
+                    </form>
+                    <div class="popup_overlay popup_hidden">
+                        <div class="popup">
+                            <span class="popup_title">The letter was sent</span>
+                            <span class="popup_subject">Without subject</span>
+                            <span class="popup_describe">Without description </span>
+                            <button class="popup_button">ok</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </section>
 
-    <footer>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_block">
+                <div class="footer_block-item">
+                    <div class="footer_block-title">
+                        Learn More
+                    </div>
+                    <a href="#">Sell Fast</a>
+                    <a href="#">Buy Now</a>
+                    <a href="#">Membership</a>
+                    <a href="#">Banner Ads</a>
+                    <a href="#">Promotions</a>
+                </div>
+                <div class="footer_block-item">
+                    <div class="footer_block-title">
+                        Help & Support
+                    </div>
+                    <a href="#">FAQ</a>
+                    <a href="#">Stay Safe</a>
+                    <a href="#">Contact us</a>
+                </div>
+                <div class="footer_block-item">
+                    <div class="footer_block-title">
+                        Social
+                    </div>
+                    <a href="#">Blog</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Youtube</a>
+                </div>
+                <div class="footer_block-item">
+                    <div class="footer_block-title">
+                        About us
+                    </div>
+                    <a href="#"> About us</a>
+                    <a href="#">Career</a>
+                    <a href="#">Terms and Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+            <div class="footer_basement">
+                <div class="copyring">Copyring &#169 2019</div>
+                <div class="footer_basement-social">
+                    <div class="footer_social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="footer_logo">
+                        <div class="footer_logo-item">DM</div>
+                        <span>Dreammaker</span>
+                    </div>
+                </div>
+            </div>
 
+        </div>
     </footer>
 
-    <script src="/js/slider.js"></script>
-    <script src="/js/main.js"></script>
+
 </body>
 
 </html>
