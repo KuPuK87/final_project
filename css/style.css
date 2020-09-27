@@ -5,7 +5,7 @@
 
 html {
     font-family: "Poppins";
-    font-weight: 400;
+    font-weight: 500;
     font-size: 14px;
     color: #505050;
     scroll-behavior: smooth;
@@ -16,16 +16,21 @@ a {
     color: inherit;
 }
 
-#home {
+#Home {
     scroll-margin-top: 95px;
 }
 
-#services,
-#portfolio,
-#about,
-#contact {
+#Service,
+#Faq,
+#Reviews,
+#Contact {
     scroll-margin-top: 90px;
 }
+
+#Promo {
+    scroll-margin-top: -195px;
+}
+
 
 .container {
     width: 80%;
@@ -181,74 +186,6 @@ header {
     transform: rotate(90deg);
 }
 
-@media (max-width: 767px) {
-    .header {
-        border: none;
-    }
-
-    .header .container {
-        justify-content: center;
-        height: 71px;
-        padding: 0;
-    }
-
-    .logo {
-        position: absolute;
-        top: 24px;
-        left: calc(50% - 44px);
-        transition: left 0.5s;
-    }
-
-    .logo h1 {
-        font-size: 2.0rem;
-    }
-
-    .burger-menu {
-        display: flex;
-    }
-
-    .header_navigation {
-        position: absolute;
-        left: -100%;
-        top: 0;
-        z-index: 25;
-        width: 278px;
-        height: 100vh;
-        background: #2d303a;
-        box-shadow: 0px -40px 20px rgba(0, 0, 0, 0.4);
-        margin: 0;
-        transition: left 0.5s;
-    }
-
-    .navigation {
-        flex-direction: column;
-        justify-content: space-between;
-        position: absolute;
-        left: 71px;
-        top: 30%;
-        height: 60vh;
-        max-height: 300px;
-        font-size: 2.4rem;
-    }
-
-    .navigation_item:not(:last-child)::after {
-        content: "";
-        padding: 0;
-    }
-
-    #home {
-        scroll-margin-top: 71px;
-    }
-
-    #services,
-    #portfolio,
-    #about,
-    #contact {
-        scroll-margin-top: 65px;
-    }
-}
-
-
 /* SLIDER HEADER */
 
 .slider_block {
@@ -359,8 +296,6 @@ header {
 .slider_pages-li:first-child {
     margin-left: 0;
 }
-
-
 
 /* Services */
 
@@ -519,7 +454,6 @@ header {
     margin-top: 50px;
 }
 
-
 /* FAQ */
 
 .faq_block-title {
@@ -642,6 +576,7 @@ header {
 }
 
 /* Reviews */
+
 .reviews_title {
     margin-top: 140px;
 }
@@ -707,6 +642,81 @@ header {
 .reviews_module-item:last-child button {
     background: #F01F35;
 }
+
+
+.reviews_block {
+    margin-top: 50px;
+}
+
+.reviews_block-slider {
+    display: flex;
+    position: relative;
+}
+
+.reviews_images {
+    position: absolute;
+    top: 0;
+    left: -27%;
+}
+
+.reviews_slider-block {
+    width: 60%;
+    margin-top: 170px;
+    margin-left: auto;
+    flex-direction: column;
+}
+
+.reviews_slider-title h3 {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 39px;
+    color: #626780;
+    text-align: center;
+}
+
+.reviews_slider-title p {
+    font-family: "Poppins";
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 30px;
+    color: #626780;
+    text-align: center;
+}
+
+.reviews_slider-reviews {
+    width: 65%;
+    margin-top: 100px;
+    margin-left: auto;
+    display: flex;
+    padding: 60px;
+    background-color: #ffffff;
+    flex-direction: column;
+    box-shadow: 0px 20px 40px rgba(238, 77, 71, 0.1);
+    border-radius: 10px;
+}
+
+.reviews_slider-text {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    color: #9D9D9D;
+}
+
+.slider_reviews-block {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+
+
+
+
+
 
 
 /* FORM */
@@ -873,11 +883,15 @@ header {
 /* Footer */
 
 .footer {
-    background: #9B9BCA;
+    margin-top: 50px;
+    background-image: url(/img/bg_footer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    padding-top: 127px;
 }
 
 .footer_block {
-    margin-top: 177px;
     display: flex;
     justify-content: center;
 }
@@ -967,4 +981,79 @@ header {
     font-size: 22px;
     line-height: 26px;
     color: #FFFFFF;
+}
+
+
+
+
+
+
+/* MEDIA */
+
+
+@media (max-width: 767px) {
+    .header {
+        border: none;
+    }
+
+    .header .container {
+        justify-content: center;
+        height: 71px;
+        padding: 0;
+    }
+
+    .logo {
+        position: absolute;
+        top: 24px;
+        left: calc(50% - 44px);
+        transition: left 0.5s;
+    }
+
+    .logo h1 {
+        font-size: 2.0rem;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .header_navigation {
+        position: absolute;
+        left: -100%;
+        top: 0;
+        z-index: 25;
+        width: 320px;
+        height: 100vh;
+        background: #2d303a;
+        box-shadow: 0px -40px 20px rgba(0, 0, 0, 0.4);
+        margin: 0;
+        transition: left 0.5s;
+    }
+
+    .navigation {
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        left: 71px;
+        top: 30%;
+        height: 60vh;
+        max-height: 300px;
+        font-size: 30px;
+    }
+
+    .navigation_item:not(:last-child)::after {
+        content: "";
+        padding: 0;
+    }
+
+    #home {
+        scroll-margin-top: 71px;
+    }
+
+    #services,
+    #portfolio,
+    #about,
+    #contact {
+        scroll-margin-top: 65px;
+    }
 }

@@ -12,6 +12,7 @@ window.addEventListener('load', () => {
   sliderBlock.addEventListener("click", slider.controllerClick.bind(slider));
 
   // burger
+
   let header = document.querySelector('.header');
   let headerContainer = document.querySelector('.header .container');
   let burgerEnable = false;
@@ -37,6 +38,7 @@ window.addEventListener('load', () => {
   }
 
   // nav
+
   document.addEventListener('scroll', onScroll);
 
   function onScroll() {
@@ -73,9 +75,8 @@ window.addEventListener('load', () => {
     document.querySelector('.logo').classList.toggle('logo_move');
   });
 
-
-
   // accordeon
+
   let acc = document.getElementsByClassName("accordion");
   let i;
 
@@ -90,8 +91,6 @@ window.addEventListener('load', () => {
       }
     });
   }
-
-
 
   // form
 
@@ -141,7 +140,5 @@ window.addEventListener('load', () => {
     popup.querySelector('.popup_describe').innerText = 'Without description';
     popup.parentElement.classList.add('popup_hidden');
   });
-
-
 
 });

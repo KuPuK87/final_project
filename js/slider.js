@@ -1,6 +1,7 @@
 class Slider {
-    constructor(images, pages, duration = 7000) {
+    constructor(images, buttons, pages, duration = 3000) {
         this.images = images;
+        this.buttons = buttons;
         this.pages = pages;
         this.index = 0;
         this.duration = duration;
@@ -42,7 +43,11 @@ class Slider {
         let target = event.target.dataset.target;
         if(target){
             event.preventDefault();
-            if(target >= "0" && target <= "9") {
+            if(target.toLowerCase() === "next") {
+                this.nextSlide();
+            } else if(target.toLowerCase() === "prev") {
+                this.prevSlide();
+            } else if(target >= "0" && target <= "9") {
                 this.changePage(Number.parseInt(target));
             }
         }
