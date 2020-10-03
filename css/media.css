@@ -273,6 +273,10 @@
         .accordion:after {
             top: 50px;
         }
+
+        .popup {
+            width: 60%;
+        }
     }
 
     @media (max-width: 375px) {
