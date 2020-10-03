@@ -115,8 +115,6 @@ window.addEventListener('load', () => {
   sliderRevPrev.addEventListener("click", previousSlide);
   sliderRevMext.addEventListener("click", nextSlide);
 
-  /* Функция перелистывания */
-
   function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName("reviews_block-slider");
@@ -128,16 +126,11 @@ window.addEventListener('load', () => {
       slideIndex = slides.length
     }
 
-    /* Проходим по каждому слайду в цикле for */
     for (let slide of slides) {
       slide.style.display = "none";
     }
     slides[slideIndex - 1].style.display = "block";
   }
-
-
-
-
 
   // form
 

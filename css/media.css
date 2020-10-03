@@ -1,0 +1,293 @@
+@media (max-width: 1300px) {
+    .reviews_images-circle {
+        display: none;
+    }
+
+    .reviews_slider-prev {
+        right: 50%;
+    }
+
+}
+
+
+@media (max-width: 1083px) {
+    .header {
+        border: none;
+    }
+
+    .header .container {
+        justify-content: center;
+        height: 71px;
+        padding: 0;
+    }
+
+    .logo {
+        position: absolute;
+        left: calc(50% - 44px);
+        transition: left 0.5s;
+    }
+
+    .logo h1 {
+        font-size: 2.0rem;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .header_navigation {
+        position: absolute;
+        left: -100%;
+        top: 0;
+        z-index: 25;
+        width: 320px;
+        height: 100vh;
+        background: #2d303a;
+        box-shadow: 0px -40px 20px rgba(0, 0, 0, 0.4);
+        margin: 0;
+        transition: left 0.5s;
+    }
+
+    .navigation {
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        left: 71px;
+        top: 30%;
+        height: 60vh;
+        max-height: 300px;
+        font-size: 30px;
+    }
+
+    .navigation_item:not(:last-child)::after {
+        content: "";
+        padding: 0;
+    }
+
+    #home {
+        scroll-margin-top: 71px;
+    }
+
+    #services,
+    #portfolio,
+    #about,
+    #contact {
+        scroll-margin-top: 65px;
+    }
+
+    .slider_li-text {
+        top: 250px;
+    }
+
+    .services_block {
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+
+    .services_block-item {
+        width: 40%;
+    }
+
+    .services_support {
+        flex-direction: column;
+    }
+
+    .services_support-item,
+    .services_support-item:first-child {
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    .promo_title h2,
+    .contact_title h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .faq_block-title h2 {
+        margin-bottom: 50px;
+    }
+
+    .faq_block-questions {
+        flex-direction: column;
+    }
+
+    .faq_block-item {
+        width: 100%;
+    }
+
+    .faq_block-item:last-child img {
+        display: none;
+    }
+
+    .accordion_panel p {
+        padding: 20px 35px;
+        margin-bottom: 30px;
+    }
+
+    .faq_block-title,
+    .faq_block-button,
+    .reviews_title,
+    .reviews_module,
+    .contact,
+    .contact_form {
+        margin-top: 70px;
+    }
+
+    .reviews_module {
+        flex-direction: column;
+    }
+
+    .reviews_module-item {
+        width: 100%;
+    }
+
+    .reviews_module-item:last-child {
+        margin-top: 70px;
+    }
+
+    .reviews_images {
+        display: none;
+    }
+
+    .reviews_slider-block {
+        width: 100%;
+        display: flex;
+        flex-direction: column
+    }
+
+    .reviews_slider-reviews {
+        margin: 0 auto;
+        margin-top: 100px;
+        width: 70%;
+    }
+
+    .reviews_slider-prev {
+        left: 15px;
+    }
+
+    .form-information {
+        padding: 50px;
+        width: 70%;
+    }
+
+    .footer_block-item:not(:last-child) {
+        margin-right: 40px;
+    }
+
+    .footer_block {
+        text-align: center;
+    }
+
+    .copyring {
+        width: 30%;
+    }
+
+    .footer_basement-social {
+        width: 70%;
+    }
+
+    @media (max-width: 650px) {
+
+        .header_navigation {
+            width: 100%;
+        }
+
+        .slider_li-text {
+            top: 140px;
+            width: 80%;
+        }
+
+        .services_title p,
+        .reviews_title p {
+            width: 100%;
+        }
+
+        .services_block-item {
+            width: 100%;
+        }
+
+        .services_support-item div {
+            width: 60px;
+            height: 60px;
+        }
+
+        .grid-item-9 {
+            font-size: 13px;
+        }
+
+        .faq_block-button button {
+            padding: 30px 70px;
+        }
+
+        .accordion {
+            padding: 0 70px 0 35px;
+            height: 130px;
+        }
+
+        .reviews_slider-reviews {
+            margin-left: 0;
+            width: 70%;
+            padding: 30px 50px;
+        }
+
+        .slider_reviews-block {
+            flex-direction: column;
+        }
+
+        .reviews_slider-prev,
+        .reviews_slider-next {
+            top: 70%;
+        }
+
+        .form-information {
+            padding: 20px;
+            width: 100%;
+        }
+
+        .footer {
+            padding-top: 50px;
+        }
+
+        .footer_block {
+            display: none;
+        }
+
+        .footer_basement {
+            margin-top: 0;
+            padding: 0;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .footer_basement div {
+            width: 100%;
+        }
+
+        .footer_basement-social {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .accordion:after {
+            top: 50px;
+        }
+    }
+
+    @media (max-width: 375px) {
+        .services_support-item div {
+            height: 50px;
+            width: 50px;
+        }
+
+        .accordion {
+            font-size: 14px;
+            padding: 0 50px 0 20px;
+        }
+
+        .logo {
+            left: 20%;
+        }
+    }
+
+}

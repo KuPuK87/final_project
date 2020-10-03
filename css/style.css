@@ -32,6 +32,39 @@ a {
 }
 
 
+button,
+.input_submit {
+    box-shadow: 0 0 0 0 rgba(9, 187, 233, .2);
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.04);
+    transition: all 0.5s;
+}
+
+button:focus {
+    outline: none;
+}
+button:active {
+    box-shadow: inset 0 0 0 1px #27496d,inset 0 5px 30px #193047;
+}
+
+
+button:hover,
+button:focus,
+.input_submit:hover,
+.input_submit:focus {
+
+    animation: pulse 1.25s infinite cubic-bezier(0.50, 0, 0, 1);
+}
+
+@keyframes pulse {
+    to {
+        box-shadow: 0 0 0 20px rgba(9, 187, 233, 0);
+    }
+}
+
 .container {
     width: 80%;
     max-width: 1120px;
@@ -425,8 +458,13 @@ header {
 .services_support-item div {
     width: 95px;
     height: 95px;
-
 }
+
+.services_support-item div img {
+    height: 100%;
+    width: 100%;
+}
+
 
 .grid-item-9 {
     display: flex;
@@ -509,19 +547,23 @@ header {
 @keyframes changeColor {
     0% {
         background: #678a83;
-      }
-      25% {
+    }
+
+    25% {
         background: #4f85a8;
-      }
-      50% {
+    }
+
+    50% {
         background: #606168;
-      }
-      75% {
+    }
+
+    75% {
         background: #4f85a8;
-      }
-      100% {
+    }
+
+    100% {
         background: #678a83;
-      }
+    }
 }
 
 /* PROMO */
@@ -1172,105 +1214,4 @@ header {
     font-size: 22px;
     line-height: 26px;
     color: #FFFFFF;
-}
-
-
-button,
-.input_submit {
-    box-shadow: 0 0 0 0 rgba(9, 187, 233, .2);
-    cursor: pointer;
-}
-
-button:hover {
-    transform: scale(1.04);
-    transition: all 1s;
-}
-
-
-button:hover,
-button:focus,
-.input_submit:hover,
-.input_submit:focus {
-
-    animation: pulse 1.25s infinite cubic-bezier(0.50, 0, 0, 1);
-}
-
-@keyframes pulse {
-    to {
-        box-shadow: 0 0 0 20px rgba(9, 187, 233, 0);
-    }
-}
-
-
-
-
-
-/* MEDIA */
-
-
-@media (max-width: 767px) {
-    .header {
-        border: none;
-    }
-
-    .header .container {
-        justify-content: center;
-        height: 71px;
-        padding: 0;
-    }
-
-    .logo {
-        position: absolute;
-        top: 24px;
-        left: calc(50% - 44px);
-        transition: left 0.5s;
-    }
-
-    .logo h1 {
-        font-size: 2.0rem;
-    }
-
-    .burger-menu {
-        display: flex;
-    }
-
-    .header_navigation {
-        position: absolute;
-        left: -100%;
-        top: 0;
-        z-index: 25;
-        width: 320px;
-        height: 100vh;
-        background: #2d303a;
-        box-shadow: 0px -40px 20px rgba(0, 0, 0, 0.4);
-        margin: 0;
-        transition: left 0.5s;
-    }
-
-    .navigation {
-        flex-direction: column;
-        justify-content: space-between;
-        position: absolute;
-        left: 71px;
-        top: 30%;
-        height: 60vh;
-        max-height: 300px;
-        font-size: 30px;
-    }
-
-    .navigation_item:not(:last-child)::after {
-        content: "";
-        padding: 0;
-    }
-
-    #home {
-        scroll-margin-top: 71px;
-    }
-
-    #services,
-    #portfolio,
-    #about,
-    #contact {
-        scroll-margin-top: 65px;
-    }
 }
