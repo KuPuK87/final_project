@@ -92,6 +92,53 @@ window.addEventListener('load', () => {
     });
   }
 
+  // Slider 2
+
+  const sliderRevPrev = document.querySelector('.reviews_slider-prev');
+  const sliderRevMext = document.querySelector('.reviews_slider-next');
+
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function nextSlide() {
+    showSlides(slideIndex += 1);
+  }
+
+  function previousSlide() {
+    showSlides(slideIndex -= 1);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  sliderRevPrev.addEventListener("click", previousSlide);
+  sliderRevMext.addEventListener("click", nextSlide);
+
+  /* Функция перелистывания */
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("reviews_block-slider");
+
+    if (n > slides.length) {
+      slideIndex = 1
+    }
+    if (n < 1) {
+      slideIndex = slides.length
+    }
+
+    /* Проходим по каждому слайду в цикле for */
+    for (let slide of slides) {
+      slide.style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+  }
+
+
+
+
+
   // form
 
   let form = document.querySelector('.form');

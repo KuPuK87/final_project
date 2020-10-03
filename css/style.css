@@ -344,6 +344,18 @@ header {
     width: 25%;
     align-items: center;
     padding: 20px;
+    cursor: pointer;
+}
+
+.services_block-item:hover {
+    width: calc(25% - 2px);
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border: 1px solid #9D9D9D;
+    border-radius: 5px;
+    transform: scale(1.02);
+    box-shadow: 0px 4px 0px 0px #C4C4C4;
+    ;
 }
 
 .services_block-item h3 {
@@ -428,10 +440,92 @@ header {
     line-height: 22px;
     color: #FFFFFF;
     text-align: center;
+    animation: changeColor 4s ease infinite;
 }
 
 
+.grid-item-3 {
+    animation: fadein 4s infinite;
+}
+
+.grid-item-5 {
+    animation: fadein 4.5s infinite;
+}
+
+.grid-item-7 {
+    animation: fadein 3.5s infinite;
+}
+
+.grid-item-11 {
+    animation: fadein 4.7s infinite;
+}
+
+.grid-item-18 {
+    animation: fadein 4.2s infinite;
+}
+
+.grid-item-20 {
+    animation: fadein 5s infinite;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 1;
+    }
+
+    10% {
+        opacity: 0.7;
+    }
+
+    25% {
+        opacity: 0.5;
+    }
+
+    40% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.3;
+    }
+
+    75% {
+        opacity: 0.5;
+    }
+
+    90% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes changeColor {
+    0% {
+        background: #678a83;
+      }
+      25% {
+        background: #4f85a8;
+      }
+      50% {
+        background: #606168;
+      }
+      75% {
+        background: #4f85a8;
+      }
+      100% {
+        background: #678a83;
+      }
+}
+
 /* PROMO */
+
 .promo {
     margin-top: 140px;
 }
@@ -526,6 +620,7 @@ header {
 }
 
 .accordion_panel {
+    margin-top: 10px;
     position: relative;
     color: #212121;
     background-color: #fff;
@@ -541,8 +636,7 @@ header {
     font-weight: 300;
     font-size: 18px;
     line-height: 30px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-radius: 20px;
     background-color: #F5F5FF;
     margin-bottom: 80px;
 }
@@ -576,10 +670,10 @@ header {
 }
 
 /* Reviews */
+
 .reviews {
     background-image: url(/img/rewiewsBg.png);
     background-repeat: no-repeat;
-    /* background-size: cover; */
     background-position: top 45% left;
 }
 
@@ -652,17 +746,38 @@ header {
 
 .reviews_block {
     margin-top: 50px;
+    position: relative;
 }
 
 .reviews_block-slider {
     display: flex;
     position: relative;
+    animation-name: fade;
+    animation-duration: 2.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 .reviews_images {
     position: absolute;
     top: 0;
     left: -27%;
+    z-index: 1;
+}
+
+.reviews_images-circle {
+    position: absolute;
+    top: 0;
+    left: -27%;
+    z-index: 2;
 }
 
 .reviews_slider-block {
@@ -722,7 +837,7 @@ header {
 .reviews_slider-prev,
 .reviews_slider-next {
     position: absolute;
-    top: calc(50% - 60px);
+    top: calc(70% - 60px);
     color: gray;
     font-size: 30px;
     text-align: center;
@@ -731,19 +846,31 @@ header {
     height: 56px;
     border-radius: 50%;
     background-color: #EEEEEE;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 1s;
+}
+
+.reviews_slider-prev:hover,
+.reviews_slider-next:hover {
+    background-color: gray;
+    color: #EEEEEE;
+    transition: all 1s;
 }
 
 
 .reviews_slider-prev {
-    left: 15px;
+    right: 49%;
 }
 
 .reviews_slider-next {
     right: 15px;
 }
+
 .slider_reviews-block img {
     margin-right: 40px;
 }
+
 .rewiews_name {
     font-family: "Poppins";
     font-style: normal;
@@ -772,13 +899,13 @@ header {
     color: rgb(250, 250, 6);
     font-size: 25px;
     margin-right: 10px;
-} 
+}
 
 
 /* FORM */
 
 .contact {
-    margin-top: 110px;
+    margin-top: 310px;
 }
 
 .contact_title {
@@ -980,6 +1107,10 @@ header {
     color: #E6E6E6;
 }
 
+.footer_block-item a:hover {
+    color: #ffffff;
+}
+
 .footer_basement {
     margin-top: 75px;
     display: flex;
@@ -1006,6 +1137,10 @@ header {
 .footer_social a {
     color: #ffffff;
     font-size: 30px;
+}
+
+.footer_social a:hover {
+    color: #E6E6E6;
 }
 
 .footer_social a:not(:last-child) {
@@ -1039,6 +1174,32 @@ header {
     color: #FFFFFF;
 }
 
+
+button,
+.input_submit {
+    box-shadow: 0 0 0 0 rgba(9, 187, 233, .2);
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.04);
+    transition: all 1s;
+}
+
+
+button:hover,
+button:focus,
+.input_submit:hover,
+.input_submit:focus {
+
+    animation: pulse 1.25s infinite cubic-bezier(0.50, 0, 0, 1);
+}
+
+@keyframes pulse {
+    to {
+        box-shadow: 0 0 0 20px rgba(9, 187, 233, 0);
+    }
+}
 
 
 
